@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.PriorityQueue;
 
 /**
@@ -20,7 +21,9 @@ public class TopKFrequenctElement {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
+		//Entry<String, String> entry = Map.entry("foo", "bar");
+		
 		List<Integer> result = TopKFrequenctElement.topKFrequentElement(new int[] { 1, 3, 5, 12, 11, 12, 11 }, 2);
 		System.out.println("Here are the K frequent numbers: " + result);
 
@@ -30,6 +33,7 @@ public class TopKFrequenctElement {
 
 	public static List<Integer> topKFrequentElement(int[] nums, int k) {
 		Map<Integer, Integer> numFrequencyMap = new HashMap<>();
+		
 		for (int n : nums)
 			numFrequencyMap.put(n, numFrequencyMap.getOrDefault(n, 0) + 1);
 
