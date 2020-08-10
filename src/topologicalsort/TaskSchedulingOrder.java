@@ -49,7 +49,7 @@ class TaskSchedulingOrder {
 		// will not be able to schedule all tasks
 		if (sortedOrder.size() != tasks)
 			return new ArrayList<>();
-
+		
 		return sortedOrder;
 	}
 
