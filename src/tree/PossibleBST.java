@@ -3,6 +3,8 @@
  */
 package tree;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 /**
@@ -23,7 +25,7 @@ public class PossibleBST {
 
 		PossibleBST bst = new PossibleBST();
 
-		Vector<Node> trees = bst.getTrees(in, 0, n - 1);
+		List<Node> trees = bst.getTrees(in, 0, n - 1);
 
 		System.out.println("Preorder traversal of different  binary trees are:");
 
@@ -42,8 +44,8 @@ public class PossibleBST {
 
 	}
 
-	public Vector<Node> getTrees(int[] arr, int start, int end) {
-		Vector<Node> trees = new Vector<Node>();
+	public List<Node> getTrees(int[] arr, int start, int end) {
+		List<Node> trees = new ArrayList<Node>();
 
 		if (start > end) {
 			trees.add(null);
@@ -51,8 +53,8 @@ public class PossibleBST {
 		}
 
 		for (int i = start; i <= end; i++) {
-			Vector<Node> ltrees = getTrees(arr, start, i - 1);
-			Vector<Node> rtrees = getTrees(arr, i + 1, end);
+			List<Node> ltrees = getTrees(arr, start, i - 1);
+			List<Node> rtrees = getTrees(arr, i + 1, end);
 
 			for (int j = 0; j < ltrees.size(); j++) {
 				for (int k = 0; k < rtrees.size(); k++) {

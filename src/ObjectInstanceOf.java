@@ -6,6 +6,13 @@ public class ObjectInstanceOf {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		float similarityDist=90;
+		double distance=67.03;
+		
+		System.out.println(" "+(distance >= similarityDist));
+		
+		
+		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("1", 1);
 		Double d = 10.0;
